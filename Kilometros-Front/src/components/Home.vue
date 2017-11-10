@@ -4,10 +4,10 @@
       <NavTop />
       <div class="titleWrapper">
         <div class="title">
-          KILOMETROS
+          {{title}}
         </div>
         <div class="subtitle">
-          OF EXPERIENCE IN THE INDUSTRY
+          {{subtitle}}
         </div>
       </div>
 
@@ -35,12 +35,13 @@
       return {
         autoplay: true,
         perPage:1,
-        paginationPadding: 8
+        paginationPadding: 8,
+        title: "KILOMETROS",
+        subtitle: "OF EXPERIENCE IN THE INDUSTRY",
       }
     }
   }
 </script>
-
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
@@ -50,7 +51,8 @@
 @import "~bulma/sass/elements/button";
 
 .Home {
-  background-image: url("../assets/banner.jpg");
+  background-image: url("../assets/tower.jpg");
+  background-attachment: fixed;
   background-size: cover;
   background-position: center center;
   height: 590.2px;
@@ -64,7 +66,7 @@
 .titleWrapper {
   align-items: center;
   display: flex;
-  padding-top: 87px;
+  padding-top: 170px;
   margin-bottom: 43px;
   flex-direction: column;
   @include mobile {
@@ -74,7 +76,7 @@
 
 .title {
   color: #fff;
-  font-family: 'Raleway', sans-serif;
+  font-family: $font;
   font-size: 26px;
   margin-bottom: 7px;
 
@@ -102,7 +104,7 @@
 .text {
   color: #fff;
   display: block;
-  font-family: 'Raleway', sans-serif;
+  font-family: $font;
   font-size: 18px;
 }
 
@@ -119,14 +121,14 @@
 
 .button {
   color: #fff;
-  background: transparent;
+  background: rgb(28, 151, 253);
   border-style: solid;
-  border-color: lightgray;
+  border-color: rgb(28, 151, 253);
   border-radius: 27px;
   border-width: 2px;
   width: 70%;
   height: 55px;
-  font-family: 'Raleway', sans-serif;
+  font-family: $font;
 
   &.is-top {
     margin-bottom: 10px;

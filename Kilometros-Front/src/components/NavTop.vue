@@ -20,10 +20,10 @@
 @import "~sass/utils/index";
 
   .navTop {
+    padding-top: 20px;
     display: flex;
+    justify-content: flex-end;
     height: 70px;
-    justify-content: center;
-    padding-top: 100px;
     width: 100%;
     @include mobile {
       display: none;
@@ -31,7 +31,7 @@
   }
 
   a {
-    font-family: 'Raleway', sans-serif;
+    font-family: $font;
     color: #fff;
     text-decoration: none;
     letter-spacing: 0.15em;
@@ -48,7 +48,7 @@
     height: 2px;
     left: 50%;
     position: absolute;
-    background: #fff;
+    background: rgb(28, 151, 253);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
